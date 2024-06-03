@@ -6,14 +6,15 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class cient {
+public class Client {
     public static void main(String[] args) throws IOException {
-        connection();
+
+            connection();
     }
 
     private static void connection() throws IOException {
         String host = "localhost";
-        int port = 8080;
+        int port = 8088;
         try (Socket clientSocket = new Socket(host, port);
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
